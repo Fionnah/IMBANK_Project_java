@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/JavaApplication10/src/javaapplication10/MainWindow.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/JavaApplication10/src/javaapplication10/SignUp.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/JavaApplication10/src/javaapplication10/LogInWindow.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/bankApplication/BankApplication.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/view/SignUp.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/model/AffiliatedBanks.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/view/SignUpWindow.java</file>
         </group>
     </open-files>
 </project-private>
