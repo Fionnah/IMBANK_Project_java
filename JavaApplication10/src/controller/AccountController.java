@@ -9,5 +9,15 @@ package controller;
  * @author Jasper
  */
 public class AccountController {
-    //try lang nako kung maupdate bagyud
+    public Double showBalance(String bankAccountNumberID){
+        return 0.00;
+    }
+    
+    public Boolean handleDeposit(String bankAccountNumberID, Double amount){
+        return false;
+    }
+    
+    public Boolean handleWithdrawal(String bankAccountNumberID, Double amount){
+        return false;
+    }
 }

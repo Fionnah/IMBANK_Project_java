@@ -4,10 +4,20 @@
  */
 package controller;
 
+import java.util.List;
+import model.Transaction;
+
 /**
  *
  * @author Jasper
  */
 public class TransactionController {
+    public Boolean initiateTransaction(Transaction transaction){
+        return false;
+    }
     
+    public List<Transaction> showTransactionHistory(String bankAccountNumberID){
+        List<Transaction> list = null;
+        return list;
+    }
 }

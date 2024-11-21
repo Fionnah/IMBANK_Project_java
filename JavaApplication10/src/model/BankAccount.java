@@ -76,6 +76,4 @@ public class BankAccount {
     public void setDateClosed(Date dateClosed) {
         this.dateClosed = dateClosed;
     }
-    
-    
 }

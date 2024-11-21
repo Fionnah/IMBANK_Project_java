@@ -4,7 +4,7 @@
  */
 package repository;
 
-import java.awt.List;
+import java.util.List;
 import model.Transaction;
 
 /**
@@ -24,8 +24,8 @@ public class TransactionRepository {
         return transaction;
     }
     
-//    public List<Transaction> getTransactionsByAccount(String transactionID){
-//        List<Transaction> transactions = new List<Transaction>();
-//        return transactions;
-//    }
+    public List<Transaction> getTransactionsByAccount(String transactionID){
+        List<Transaction> transactions = null;
+        return transactions;
+    }
 }
