@@ -46,8 +46,6 @@
                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-<<<<<<< HEAD
-=======
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
@@ -57,7 +55,6 @@
                           <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
->>>>>>> dc94c43a6f8486b9e0e6d9a676bfd9de1602bab9
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -86,15 +83,12 @@
                                       <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextField13" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
-=======
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                                           <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jTextField8" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jTextField7" alignment="0" max="32767" attributes="0"/>
->>>>>>> dc94c43a6f8486b9e0e6d9a676bfd9de1602bab9
                                   </Group>
                               </Group>
                           </Group>
@@ -118,15 +112,6 @@
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -246,19 +231,6 @@
                               <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-<<<<<<< HEAD
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField12" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField13" min="-2" max="-2" attributes="0"/>
-                      </Group>
-=======
->>>>>>> dc94c43a6f8486b9e0e6d9a676bfd9de1602bab9
                   </Group>
                   <EmptySpace pref="34" max="32767" attributes="0"/>
                   <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
@@ -267,11 +239,7 @@
                       <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jToggleButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-<<<<<<< HEAD
-                  <EmptySpace pref="28" max="32767" attributes="0"/>
-=======
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
->>>>>>> dc94c43a6f8486b9e0e6d9a676bfd9de1602bab9
               </Group>
           </Group>
         </DimensionLayout>
