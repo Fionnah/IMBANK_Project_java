@@ -10,4 +10,11 @@ package controller;
  */
 public class AuthController {
     
+    public Boolean handleLogin(){
+        return false;
+    }
+    
+    public Boolean handleRegistration(){
+        return false;
+    }
 }

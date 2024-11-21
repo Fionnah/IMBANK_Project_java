@@ -18,6 +18,8 @@ public class BankAccount {
     private Date dateOpened;
     private Date dateClosed;
 
+    public BankAccount(){};
+    
     public BankAccount(int accountNumberID, int customerID, String accountType, float accountBalance, Date dateOpened, Date dateClosed) {
         this.accountNumberID = accountNumberID;
         this.customerID = customerID;

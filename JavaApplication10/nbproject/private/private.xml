@@ -5,8 +5,11 @@
         <group>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/bankApplication/BankApplication.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/view/SignUp.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/repository/BankAccountRepository.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/repository/ConnectionManager.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/view/LogInWindow.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/model/AffiliatedBanks.java</file>
-            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/view/SignUpWindow.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/controller/AccountController.java</file>
         </group>
     </open-files>
 </project-private>

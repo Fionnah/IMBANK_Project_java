@@ -4,10 +4,25 @@
  */
 package repository;
 
+import model.Customer;
 /**
  *
  * @author Jasper
  */
 public class CustomerRepository {
     
+    public Boolean saveCustomer(Customer customer){
+        return true;
+    }
+    
+    public Customer findCustomerByUsername(String username){
+        Customer customer = new Customer();
+        return customer;
+    }
+    
+    public Customer findCustomerByID(String customerID){
+        Customer customer = new Customer();
+        return customer;
+    }
 }
+
