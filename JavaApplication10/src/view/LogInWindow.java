@@ -4,18 +4,32 @@
  */
 package view;
 
+import controller.AccountController;
+import controller.AuthController;
+import controller.TransactionController;
+
 /**
  *
  * @author Admin
  */
 public class LogInWindow extends javax.swing.JFrame {
-
-    /**
+    
+    private final AccountController accountController;
+    private final AuthController authController;
+    private final TransactionController transactionController;
+    
+     /**
      * Creates new form LogInWindow
+     * @param accountController
+     * @param authController
+     * @param transactionController
      */
-    public LogInWindow() {
+    public LogInWindow(AccountController accountController, AuthController authController, TransactionController transactionController){
+        this.accountController = accountController;
+        this.authController = authController;
+        this.transactionController = transactionController;
+
         initComponents();
-        
         this.setLocationRelativeTo(null);
         
 //        :root {
@@ -151,7 +165,8 @@ public class LogInWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_SubmitbtnActionPerformed
 
     private void SignupbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupbtnActionPerformed
-        SignUp signUpFrame = new SignUp();
+        SignUpWin signUpFrame = new SignUpWin(accountController, authController, transactionController);
+        signUpFrame.pack();
         signUpFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SignupbtnActionPerformed

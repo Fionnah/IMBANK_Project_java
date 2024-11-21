@@ -4,11 +4,19 @@
  */
 package controller;
 
+import service.AccountServiceImpl;
 /**
  *
  * @author Jasper
  */
 public class AccountController {
+    
+    private final AccountServiceImpl accountService;
+    
+    public AccountController(AccountServiceImpl accountService){
+        this.accountService = accountService;
+    }
+    
     public Double showBalance(String bankAccountNumberID){
         return 0.00;
     }

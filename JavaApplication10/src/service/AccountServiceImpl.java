@@ -4,6 +4,8 @@
  */
 package service;
 
+import repository.BankAccountRepository;
+
 /**
  *
  * @author Jasper
@@ -14,6 +16,12 @@ interface AccountService{
     Boolean withdraw(String bankAccountNumberID, Double amount);
 }
 public class AccountServiceImpl implements AccountService {
+    
+    private final BankAccountRepository bankAccountRepository;
+    
+    public AccountServiceImpl(BankAccountRepository bankAccountRepository){
+        this.bankAccountRepository = bankAccountRepository;
+    }
     
     @Override
     public Double getAccountBalance(String bankAccountNumberID){

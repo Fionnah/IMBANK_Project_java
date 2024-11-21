@@ -6,6 +6,7 @@ package service;
 
 import java.util.List;
 import model.Transaction;
+import repository.TransactionRepository;
 
 /**
  *
@@ -18,6 +19,12 @@ interface TransactionService{
 
 public class TransactionServiceImpl implements TransactionService{
 
+    private final TransactionRepository transactionRepository;
+    
+    public TransactionServiceImpl(TransactionRepository transactionRepository){
+        this.transactionRepository = transactionRepository;
+    }
+    
     @Override
     public Boolean processTransaction(Transaction transaction) {
         return false;

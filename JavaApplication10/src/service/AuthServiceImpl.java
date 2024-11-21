@@ -5,6 +5,7 @@
 package service;
 
 import model.Customer;
+import repository.CustomerRepository;
 
 /**
  *
@@ -17,6 +18,12 @@ interface AuthService{
 
 public class AuthServiceImpl implements AuthService{
 
+    private final CustomerRepository customerRepository;
+    
+    public AuthServiceImpl(CustomerRepository customerRepository){
+        this.customerRepository = customerRepository;
+    }
+    
     @Override
     public Boolean login(String username, String password) {
         return false;

@@ -4,11 +4,19 @@
  */
 package controller;
 
+import service.AuthServiceImpl;
+
 /**
  *
  * @author Jasper
  */
 public class AuthController {
+    
+    private final AuthServiceImpl authService;
+    
+    public AuthController(AuthServiceImpl authService){
+        this.authService = authService;
+    }
     
     public Boolean handleLogin(){
         return false;

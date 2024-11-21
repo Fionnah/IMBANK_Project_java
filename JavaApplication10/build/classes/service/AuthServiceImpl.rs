@@ -1,2 +1,0 @@
-service.AuthService
-service.AuthServiceImpl

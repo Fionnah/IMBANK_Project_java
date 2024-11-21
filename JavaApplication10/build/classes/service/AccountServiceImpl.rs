@@ -1,2 +1,0 @@
-service.AccountServiceImpl
-service.AccountService

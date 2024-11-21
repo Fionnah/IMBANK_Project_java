@@ -6,12 +6,19 @@ package controller;
 
 import java.util.List;
 import model.Transaction;
+import service.TransactionServiceImpl;
 
 /**
  *
  * @author Jasper
  */
 public class TransactionController {
+    
+    private final TransactionServiceImpl transactionService;
+    
+    public TransactionController(TransactionServiceImpl transactionService){
+        this.transactionService = transactionService;
+    }
     public Boolean initiateTransaction(Transaction transaction){
         return false;
     }
