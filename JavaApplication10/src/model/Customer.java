@@ -15,6 +15,8 @@ public class Customer {
     private String email;
     private int personID;
 
+    public Customer(){};
+    
     public Customer(int customerID, String username, String password, String email, int personID) {
         this.customerID = customerID;
         this.username = username;

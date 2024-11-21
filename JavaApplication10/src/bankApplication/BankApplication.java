@@ -4,6 +4,7 @@
  */
 package bankApplication;
 
+import java.awt.EventQueue;
 import view.LogInWindow;
 /**
  *
@@ -15,6 +16,6 @@ public class BankApplication {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        LogInWindow loginWindow = new LogInWindow();
+        EventQueue.invokeLater(LogInWindow::new);
     }
 }

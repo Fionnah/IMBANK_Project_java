@@ -32,9 +32,4 @@ public class ConnectionManager {
         }
         return con;
     }
-    
-    public static void main(String[] args) {
-        Connection con = getConnection();
-        
-    }
 }
