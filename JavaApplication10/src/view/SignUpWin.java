@@ -291,8 +291,6 @@ public class SignUpWin extends javax.swing.JFrame {
                 .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-<<<<<<< HEAD
-=======
                         .addGap(30, 30, 30)
                         .addComponent(jLabel3)
                         .addGap(194, 194, 194)
@@ -301,7 +299,6 @@ public class SignUpWin extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addGap(192, 192, 192))
                     .addGroup(jPanel1Layout.createSequentialGroup()
->>>>>>> dc94c43a6f8486b9e0e6d9a676bfd9de1602bab9
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(jLabel5)
@@ -325,7 +322,6 @@ public class SignUpWin extends javax.swing.JFrame {
                                     .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
                                     .addComponent(jLabel11)
                                     .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
-<<<<<<< HEAD
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -337,7 +333,6 @@ public class SignUpWin extends javax.swing.JFrame {
                                     .addComponent(jTextField13)
                                     .addComponent(jLabel19))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-=======
                                     .addComponent(jLabel12)
                                     .addComponent(jTextField13)
                                     .addComponent(jLabel19)
@@ -347,7 +342,6 @@ public class SignUpWin extends javax.swing.JFrame {
                                     .addComponent(jTextField8)
                                     .addComponent(jTextField7))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
->>>>>>> dc94c43a6f8486b9e0e6d9a676bfd9de1602bab9
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel14)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -356,7 +350,6 @@ public class SignUpWin extends javax.swing.JFrame {
                             .addComponent(jLabel16)
                             .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel17)
-<<<<<<< HEAD
                             .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(64, 64, 64))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -367,7 +360,6 @@ public class SignUpWin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel4)
                         .addGap(159, 159, 159))))
-=======
                             .addComponent(jLabel20)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -376,7 +368,6 @@ public class SignUpWin extends javax.swing.JFrame {
                                     .addComponent(jRadioButton4))
                                 .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(64, 64, 64))))
->>>>>>> dc94c43a6f8486b9e0e6d9a676bfd9de1602bab9
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(403, 403, 403)
                 .addComponent(jLabel18)
@@ -469,7 +460,6 @@ public class SignUpWin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton1)
-<<<<<<< HEAD
                             .addComponent(jRadioButton2)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel17)
@@ -480,20 +470,15 @@ public class SignUpWin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(31, 31, 31)
-=======
                             .addComponent(jRadioButton2))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
->>>>>>> dc94c43a6f8486b9e0e6d9a676bfd9de1602bab9
                 .addComponent(jToggleButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
                     .addComponent(jToggleButton2))
-<<<<<<< HEAD
                 .addContainerGap(28, Short.MAX_VALUE))
-=======
                 .addGap(16, 16, 16))
->>>>>>> dc94c43a6f8486b9e0e6d9a676bfd9de1602bab9
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -547,8 +532,6 @@ public class SignUpWin extends javax.swing.JFrame {
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton2ActionPerformed
-<<<<<<< HEAD
-=======
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
@@ -588,8 +571,6 @@ public class SignUpWin extends javax.swing.JFrame {
             }
         });
     }
-
->>>>>>> dc94c43a6f8486b9e0e6d9a676bfd9de1602bab9
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
