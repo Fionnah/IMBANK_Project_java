@@ -12,6 +12,8 @@ public class AffiliatedBanks {
     private int bankID;
     private String bankName;
     private float charge;
+    
+    public AffiliatedBanks(){}
 
     public AffiliatedBanks(int bankID, String bankName, float charge) {
         this.bankID = bankID;

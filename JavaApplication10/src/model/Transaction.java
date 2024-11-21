@@ -20,7 +20,7 @@ public class Transaction {
     private String requestStatus;
     private String OTP;
 
-    public Transaction(){};
+    public Transaction(){}
     
     public Transaction(int transactionID, int accountNumberID, int affiliatedBankID, String transactionType, float amount, LocalDateTime transactionDateTime, String requestStatus, String OTP) {
         this.transactionID = transactionID;

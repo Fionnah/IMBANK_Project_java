@@ -12,6 +12,8 @@ public class CardInfo {
     private Long cardNumber;
     private int cardPIN;
     private int accountNumberID;
+    
+    public CardInfo(){}
 
     public CardInfo(Long cardNumber, int cardPIN, int accountNumberID) {
         this.cardNumber = cardNumber;

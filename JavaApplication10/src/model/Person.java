@@ -19,6 +19,8 @@ public class Person {
     private String sex;
     private String phoneNum;
     private String address;
+    
+    public Person() {}
 
     public Person(int personID, String firstName, String lastName, int age, Date birthdate, String sex, String phoneNum, String address) {
         this.personID = personID;

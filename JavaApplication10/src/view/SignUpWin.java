@@ -3,6 +3,7 @@ package view;
 import controller.AccountController;
 import controller.AuthController;
 import controller.TransactionController;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -20,6 +21,8 @@ public class SignUpWin extends javax.swing.JFrame {
     private final AuthController authController;
     private final TransactionController transactionController;
     
+    private String genderSelection = "";
+    private String bankAccountTypeSelection = "";
     
     /**
      * Creates new form SignUpWin
@@ -458,7 +461,11 @@ public class SignUpWin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void femaleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_femaleButtonActionPerformed
-        // TODO add your handling code here:
+         if(evt.getSource() == femaleButton){
+            genderSelection = femaleButton.getText();
+        } else {
+            genderSelection = "";
+        }
     }//GEN-LAST:event_femaleButtonActionPerformed
 
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
@@ -469,28 +476,63 @@ public class SignUpWin extends javax.swing.JFrame {
     }//GEN-LAST:event_SignUpButtonActionPerformed
 
     private void savingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savingsButtonActionPerformed
-        // TODO add your handling code here:
+       if(evt.getSource() == savingsButton){
+            bankAccountTypeSelection = savingsButton.getText();
+        } else {
+            bankAccountTypeSelection = "";
+        }
     }//GEN-LAST:event_savingsButtonActionPerformed
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
         // TODO add your handling code here:
-        getRegistrationInput();
+        String[] data = getRegistrationInput().trim().split(" ");
+        
+        //authController.getData(data);
     }//GEN-LAST:event_SubmitButtonActionPerformed
 
     private void maleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleButtonActionPerformed
         if(evt.getSource() == maleButton){
-        
+            genderSelection = maleButton.getText();
         } else {
-            
+            genderSelection = "";
         }
     }//GEN-LAST:event_maleButtonActionPerformed
 
     private void checkingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkingsButtonActionPerformed
-        // TODO add your handling code here:
+       if(evt.getSource() == checkingsButton){
+            bankAccountTypeSelection = checkingsButton.getText();
+        } else {
+            bankAccountTypeSelection = "";
+        }
     }//GEN-LAST:event_checkingsButtonActionPerformed
 
-    private void getRegistrationInput(){
+    public String getRegistrationInput(){
         
+        String data = 
+        
+        firstNameField.getText() + " " + 
+        lastNameField.getText() + " " + 
+        ageField.getText()+ " " + 
+        dtOfBirthField.getText()+ " " + 
+        genderSelection+ " " + 
+        
+        phoneNumField.getText()+ " " + 
+        addressField.getText()+ " " + 
+        cityField.getText()+ " " + 
+        provinceField.getText()+ " " + 
+        zipCodeField.getText()+ " " + 
+        
+        emailField.getText()+ " " + 
+        usernameField.getText()+ " " + 
+        passwordField.getText()+ " " + 
+        confirmPasswordField.getText()+ " " + 
+        bankAccountTypeSelection;
+        
+        return data;
+    }
+    
+    public void showRegistrationError(){
+        JOptionPane.showMessageDialog(rootPane, "");
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
