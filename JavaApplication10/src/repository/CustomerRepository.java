@@ -24,5 +24,9 @@ public class CustomerRepository {
         Customer customer = new Customer();
         return customer;
     }
+    
+    public Boolean validateUser(String username, String password){
+        return false;
+    }
 }
 

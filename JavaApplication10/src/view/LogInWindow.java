@@ -159,14 +159,13 @@ public class LogInWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void SubmitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitbtnActionPerformed
-        
-
-        
+       
     }//GEN-LAST:event_SubmitbtnActionPerformed
 
     private void SignupbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupbtnActionPerformed
         SignUpWin signUpFrame = new SignUpWin(accountController, authController, transactionController);
         signUpFrame.pack();
+        signUpFrame.setLocationRelativeTo(null);
         signUpFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SignupbtnActionPerformed

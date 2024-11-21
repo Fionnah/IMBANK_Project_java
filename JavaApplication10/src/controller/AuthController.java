@@ -4,6 +4,7 @@
  */
 package controller;
 
+import model.Customer;
 import service.AuthServiceImpl;
 
 /**
@@ -18,11 +19,11 @@ public class AuthController {
         this.authService = authService;
     }
     
-    public Boolean handleLogin(){
-        return false;
+    public Boolean handleLogin(String username, String password){
+        return authService.login(username, password);
     }
     
-    public Boolean handleRegistration(){
-        return false;
+    public Boolean handleRegistration(Customer customer){
+        return authService.register(customer);
     }
 }

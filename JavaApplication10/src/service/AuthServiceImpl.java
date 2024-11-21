@@ -26,11 +26,11 @@ public class AuthServiceImpl implements AuthService{
     
     @Override
     public Boolean login(String username, String password) {
-        return false;
+        return customerRepository.validateUser(username, password);
     }
 
     @Override
     public Boolean register(Customer customer) {
-        return false;
+        return customerRepository.saveCustomer(customer);
     }
 }

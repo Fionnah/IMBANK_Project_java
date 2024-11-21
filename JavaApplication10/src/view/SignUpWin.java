@@ -31,7 +31,6 @@ public class SignUpWin extends javax.swing.JFrame {
         this.transactionController = transactionController;
         
         initComponents();
-        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -43,6 +42,8 @@ public class SignUpWin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        GenderButtonGroup = new javax.swing.ButtonGroup();
+        BankAccountTypeBtnGrp = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -54,10 +55,10 @@ public class SignUpWin extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        firstNameField = new javax.swing.JTextField();
+        lastNameField = new javax.swing.JTextField();
+        ageField = new javax.swing.JTextField();
+        dtOfBirthField = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel10 = new javax.swing.JLabel();
@@ -68,7 +69,7 @@ public class SignUpWin extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        SubmitButton = new javax.swing.JToggleButton();
         jLabel14 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
@@ -80,7 +81,7 @@ public class SignUpWin extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jTextField13 = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
-        jToggleButton2 = new javax.swing.JToggleButton();
+        SignUpButton = new javax.swing.JToggleButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jLabel20 = new javax.swing.JLabel();
         jRadioButton4 = new javax.swing.JRadioButton();
@@ -142,32 +143,34 @@ public class SignUpWin extends javax.swing.JFrame {
         jLabel9.setText("Date of Birth:");
         jLabel9.setToolTipText("");
 
-        jTextField1.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
+        firstNameField.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        lastNameField.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
+        lastNameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                lastNameFieldActionPerformed(evt);
             }
         });
 
-        jTextField3.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        ageField.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
+        ageField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                ageFieldActionPerformed(evt);
             }
         });
 
-        jTextField4.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        dtOfBirthField.setFont(new java.awt.Font("MS UI Gothic", 0, 24)); // NOI18N
+        dtOfBirthField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                dtOfBirthFieldActionPerformed(evt);
             }
         });
 
+        GenderButtonGroup.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
         jRadioButton1.setText("Male");
 
+        GenderButtonGroup.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
         jRadioButton2.setText("Female");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -215,10 +218,15 @@ public class SignUpWin extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton1.setBackground(new java.awt.Color(35, 35, 77));
-        jToggleButton1.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton1.setText("Submit");
+        SubmitButton.setBackground(new java.awt.Color(35, 35, 77));
+        SubmitButton.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+        SubmitButton.setForeground(new java.awt.Color(255, 255, 255));
+        SubmitButton.setText("Submit");
+        SubmitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SubmitButtonActionPerformed(evt);
+            }
+        });
 
         jLabel14.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
         jLabel14.setText("Email:");
@@ -259,16 +267,17 @@ public class SignUpWin extends javax.swing.JFrame {
         jLabel19.setText("Province");
         jLabel19.setToolTipText("");
 
-        jToggleButton2.setBackground(new java.awt.Color(35, 35, 77));
-        jToggleButton2.setFont(new java.awt.Font("MS UI Gothic", 0, 18)); // NOI18N
-        jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton2.setText("Sign In");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        SignUpButton.setBackground(new java.awt.Color(35, 35, 77));
+        SignUpButton.setFont(new java.awt.Font("MS UI Gothic", 0, 18)); // NOI18N
+        SignUpButton.setForeground(new java.awt.Color(255, 255, 255));
+        SignUpButton.setText("Sign In");
+        SignUpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                SignUpButtonActionPerformed(evt);
             }
         });
 
+        BankAccountTypeBtnGrp.add(jRadioButton3);
         jRadioButton3.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
         jRadioButton3.setText("Checkings");
 
@@ -276,6 +285,7 @@ public class SignUpWin extends javax.swing.JFrame {
         jLabel20.setText("Type of Bank Account");
         jLabel20.setToolTipText("");
 
+        BankAccountTypeBtnGrp.add(jRadioButton4);
         jRadioButton4.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
         jRadioButton4.setText("Savings");
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -297,7 +307,7 @@ public class SignUpWin extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addGap(194, 194, 194)
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 218, Short.MAX_VALUE)
                         .addComponent(jLabel4)
                         .addGap(192, 192, 192))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -307,16 +317,16 @@ public class SignUpWin extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel6)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
-                                    .addComponent(jRadioButton1)
-                                    .addComponent(jLabel8)
+                                    .addComponent(lastNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+                                    .addComponent(firstNameField, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(121, 121, 121)
+                                        .addComponent(jRadioButton1)
+                                        .addGap(47, 47, 47)
                                         .addComponent(jRadioButton2))
+                                    .addComponent(jLabel8)
                                     .addComponent(jLabel9)
-                                    .addComponent(jTextField4)
-                                    .addComponent(jTextField3))
+                                    .addComponent(dtOfBirthField)
+                                    .addComponent(ageField))
                                 .addGap(111, 111, 111)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel13)
@@ -329,10 +339,10 @@ public class SignUpWin extends javax.swing.JFrame {
                                     .addComponent(jLabel19)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(42, 42, 42)
-                                        .addComponent(jToggleButton1))
+                                        .addComponent(SubmitButton))
                                     .addComponent(jTextField8)
                                     .addComponent(jTextField7))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel14)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -353,7 +363,7 @@ public class SignUpWin extends javax.swing.JFrame {
                 .addGap(403, 403, 403)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton2)
+                .addComponent(SignUpButton)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -372,11 +382,11 @@ public class SignUpWin extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(firstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel14)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -398,7 +408,7 @@ public class SignUpWin extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -435,7 +445,7 @@ public class SignUpWin extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(dtOfBirthField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -443,11 +453,11 @@ public class SignUpWin extends javax.swing.JFrame {
                             .addComponent(jRadioButton1)
                             .addComponent(jRadioButton2))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(jToggleButton1)
+                .addComponent(SubmitButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
-                    .addComponent(jToggleButton2))
+                    .addComponent(SignUpButton))
                 .addGap(16, 16, 16))
         );
 
@@ -455,11 +465,14 @@ public class SignUpWin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -467,17 +480,17 @@ public class SignUpWin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void lastNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_lastNameFieldActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void ageFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_ageFieldActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void dtOfBirthFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dtOfBirthFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_dtOfBirthFieldActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
@@ -499,15 +512,34 @@ public class SignUpWin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField13ActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
+        LogInWindow logIn = new LogInWindow(accountController, authController, transactionController);
+        logIn.pack();
+        logIn.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_SignUpButtonActionPerformed
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
+    private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
+        // TODO add your handling code here:
+        getRegistrationInput();
+    }//GEN-LAST:event_SubmitButtonActionPerformed
+
+    private void getRegistrationInput(){
+        
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup BankAccountTypeBtnGrp;
+    private javax.swing.ButtonGroup GenderButtonGroup;
+    private javax.swing.JToggleButton SignUpButton;
+    private javax.swing.JToggleButton SubmitButton;
+    private javax.swing.JTextField ageField;
+    private javax.swing.JTextField dtOfBirthField;
+    private javax.swing.JTextField firstNameField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -534,20 +566,15 @@ public class SignUpWin extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JTextField lastNameField;
     // End of variables declaration//GEN-END:variables
 }
