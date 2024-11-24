@@ -9,12 +9,27 @@ package view;
  * @author Admin
  */
 public class MainWindow extends javax.swing.JFrame {
+    
+private double currentBalance = 0.00; 
+private javax.swing.table.DefaultTableModel transactionTableModel;
+
 
     /**
      * Creates new form Main
      */
     public MainWindow() {
         initComponents();
+        
+        
+        jDesktopPane1.setVisible(false);
+        
+        transactionTableModel = new javax.swing.table.DefaultTableModel(
+        new Object[][]{},
+        new String[]{"Transaction Type", "Bank", "Amount", "Remaining Balance"});
+        jTable1.setModel(transactionTableModel);
+
+        
+        //Color redbutton = new Color(215,107,107);
     }
 
     /**
@@ -41,14 +56,16 @@ public class MainWindow extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jToggleButton2 = new javax.swing.JToggleButton();
+        jToggleButton3 = new javax.swing.JToggleButton();
+        jToggleButton4 = new javax.swing.JToggleButton();
+        jToggleButton5 = new javax.swing.JToggleButton();
+        jToggleButton6 = new javax.swing.JToggleButton();
+        Withdrawbtn = new javax.swing.JToggleButton();
+        Depositbtn = new javax.swing.JToggleButton();
         imbank2 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
@@ -96,6 +113,11 @@ public class MainWindow extends javax.swing.JFrame {
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jPanel1 = new javax.swing.JPanel();
+        jTextField4 = new javax.swing.JTextField();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(930, 610));
@@ -205,7 +227,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(buttonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonsLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         buttonsLayout.setVerticalGroup(
@@ -240,6 +262,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Current Balance");
 
+        jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
@@ -257,15 +280,15 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(9, 9, 9)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         maindashboard.add(jPanel4);
-        jPanel4.setBounds(250, 100, 597, 102);
+        jPanel4.setBounds(250, 100, 597, 100);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -273,27 +296,10 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(35, 35, 77));
         jLabel3.setText("Select Transaction Type Below");
 
-        jButton1.setBackground(new java.awt.Color(35, 35, 77));
-        jButton1.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Withdraw");
-
-        jButton2.setBackground(new java.awt.Color(35, 35, 77));
-        jButton2.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Deposit");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jLabel4.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(35, 35, 77));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Select Type of Bank Below");
-
-        jButton3.setText("jButton3");
 
         jButton4.setBackground(new java.awt.Color(35, 35, 77));
         jButton4.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
@@ -305,11 +311,27 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("jButton3");
+        jToggleButton1.setText("IMBank");
 
-        jButton6.setText("jButton3");
+        jToggleButton2.setText("BDO");
 
-        jButton7.setText("jButton3");
+        jToggleButton3.setText("LandBank");
+
+        jToggleButton4.setText("MetroBank");
+
+        jToggleButton5.setText("BPI");
+
+        jToggleButton6.setText("RCBC");
+
+        Withdrawbtn.setBackground(new java.awt.Color(35, 35, 77));
+        Withdrawbtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
+        Withdrawbtn.setForeground(new java.awt.Color(255, 255, 255));
+        Withdrawbtn.setText("Withdraw");
+
+        Depositbtn.setBackground(new java.awt.Color(35, 35, 77));
+        Depositbtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
+        Depositbtn.setForeground(new java.awt.Color(255, 255, 255));
+        Depositbtn.setText("Deposit");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -318,54 +340,60 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Withdrawbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Depositbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addComponent(jButton5)
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jButton3)
-                                .addGap(25, 25, 25)
-                                .addComponent(jButton6)
-                                .addGap(28, 28, 28)
-                                .addComponent(jButton7)))))
-                .addContainerGap(90, Short.MAX_VALUE))
+                                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jToggleButton3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jToggleButton4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addComponent(jLabel3)))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(14, 14, 14)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
-                .addGap(39, 39, 39)
+                    .addComponent(Withdrawbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Depositbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(jButton4)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
         );
 
         maindashboard.add(jPanel5);
-        jPanel5.setBounds(250, 220, 597, 317);
+        jPanel5.setBounds(250, 220, 597, 340);
 
         imbank2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -494,12 +522,13 @@ public class MainWindow extends javax.swing.JFrame {
 
         parent.add(maindashboard, "card2");
 
-        TransactionHistory.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        TransactionHistory.setLayout(null);
 
         jLabel6.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(35, 35, 77));
         jLabel6.setText("Transaction History");
-        TransactionHistory.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(386, 106, -1, -1));
+        TransactionHistory.add(jLabel6);
+        jLabel6.setBounds(386, 106, 318, 37);
 
         jTable1.setFont(new java.awt.Font("MS UI Gothic", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -515,7 +544,8 @@ public class MainWindow extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        TransactionHistory.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 161, 661, 390));
+        TransactionHistory.add(jScrollPane1);
+        jScrollPane1.setBounds(230, 161, 661, 390);
 
         imbank1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -573,7 +603,8 @@ public class MainWindow extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        TransactionHistory.add(imbank1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        TransactionHistory.add(imbank1);
+        imbank1.setBounds(0, 0, 930, 81);
 
         buttons1.setBackground(new java.awt.Color(35, 35, 77));
 
@@ -638,7 +669,8 @@ public class MainWindow extends javax.swing.JFrame {
                     .addContainerGap(519, Short.MAX_VALUE)))
         );
 
-        TransactionHistory.add(buttons1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
+        TransactionHistory.add(buttons1);
+        buttons1.setBounds(0, 80, 180, 620);
 
         parent.add(TransactionHistory, "card3");
 
@@ -917,16 +949,147 @@ public class MainWindow extends javax.swing.JFrame {
         getContentPane().add(parent);
         parent.setBounds(0, 0, 930, 570);
 
+        jTextField4.setFont(new java.awt.Font("MS UI Gothic", 0, 30)); // NOI18N
+        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jPanel9.setBackground(new java.awt.Color(35, 35, 77));
+
+        jLabel26.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("Enter the amount:");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addComponent(jLabel26)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel26)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(87, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+
+        jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        getContentPane().add(jDesktopPane1);
+        jDesktopPane1.setBounds(0, 0, 474, 191);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+ 
+        if ((Withdrawbtn.isSelected() || Depositbtn.isSelected()) && 
+            (jToggleButton1.isSelected() || jToggleButton2.isSelected() ||
+             jToggleButton3.isSelected() || jToggleButton4.isSelected() ||
+             jToggleButton5.isSelected() || jToggleButton6.isSelected())) {
+
+            String inputAmount = javax.swing.JOptionPane.showInputDialog(this, "Enter the amount:", "Transaction Amount", javax.swing.JOptionPane.PLAIN_MESSAGE);
+
+            if (inputAmount != null && !inputAmount.trim().isEmpty()) {
+                try {
+                    double amount = Double.parseDouble(inputAmount.trim());
+
+                    if (amount <= 0) {
+                        javax.swing.JOptionPane.showMessageDialog(this, "Please enter a valid amount greater than zero.", "Invalid Amount", javax.swing.JOptionPane.ERROR_MESSAGE);
+                    } else {
+                        String transactionType = "";
+                        String selectedBank = "";
+
+                        if (jToggleButton1.isSelected()) selectedBank = "IMBank";
+                        else if (jToggleButton2.isSelected()) selectedBank = "BDO";
+                        else if (jToggleButton3.isSelected()) selectedBank = "LandBank";
+                        else if (jToggleButton4.isSelected()) selectedBank = "MetroBank";
+                        else if (jToggleButton5.isSelected()) selectedBank = "BPI";
+                        else if (jToggleButton6.isSelected()) selectedBank = "RCBC";
+
+                        if (Withdrawbtn.isSelected()) {
+                            transactionType = "Withdraw";
+
+                            if (amount > currentBalance) {
+                                javax.swing.JOptionPane.showMessageDialog(this, "Insufficient balance! Your current balance is: " + String.format("%.2f", currentBalance), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+                            } else {
+                                currentBalance -= amount;
+                                javax.swing.JOptionPane.showMessageDialog(this, "Withdrawal successful! New balance: " + String.format("%.2f", currentBalance), "Success", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                                //wala pako nag add sa account id, otp etc
+                                transactionTableModel.addRow(new Object[]{transactionType, selectedBank, amount, currentBalance});
+                            }
+                        } else if (Depositbtn.isSelected()) {
+                            transactionType = "Deposit";
+                            currentBalance += amount;
+                            javax.swing.JOptionPane.showMessageDialog(this, "Deposit successful! New balance: " + String.format("%.2f", currentBalance), "Success", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                            transactionTableModel.addRow(new Object[]{transactionType, selectedBank, amount, currentBalance});
+                        }
+
+                        jTextField1.setText(String.format("%.2f", currentBalance));
+                    }
+                } catch (NumberFormatException ex) {
+                    javax.swing.JOptionPane.showMessageDialog(this, "Invalid input. Please enter a valid numeric amount.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(this, "Transaction canceled or no amount entered.", "Canceled", javax.swing.JOptionPane.WARNING_MESSAGE);
+            }
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Please select a transaction type and a bank before proceeding.", "Incomplete Selection", javax.swing.JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        parent.removeAll();
+        parent.add(Profile);
+        parent.repaint();
+        parent.revalidate();
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
@@ -944,25 +1107,17 @@ public class MainWindow extends javax.swing.JFrame {
         parent.revalidate();
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-        parent.removeAll();
-        parent.add(Profile);
-        parent.repaint();
-        parent.revalidate();
-    }//GEN-LAST:event_jButton10ActionPerformed
-
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton14ActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
@@ -970,23 +1125,19 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
+        parent.removeAll();
+        parent.add(maindashboard);
+        parent.repaint();
+        parent.revalidate();
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
+        parent.removeAll();
+        parent.add(Profile);
+        parent.repaint();
+        parent.revalidate();
     }//GEN-LAST:event_jButton18ActionPerformed
-
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
-
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20ActionPerformed
-
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton21ActionPerformed
     
     public static void main(String[] args) {
         MainWindow mw = new MainWindow();
@@ -994,8 +1145,10 @@ public class MainWindow extends javax.swing.JFrame {
         mw.setVisible(true);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton Depositbtn;
     private javax.swing.JPanel Profile;
     private javax.swing.JPanel TransactionHistory;
+    private javax.swing.JToggleButton Withdrawbtn;
     private javax.swing.JPanel buttons;
     private javax.swing.JPanel buttons1;
     private javax.swing.JPanel buttons2;
@@ -1004,7 +1157,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel imbank1;
     private javax.swing.JPanel imbank2;
     private javax.swing.JPanel imbank3;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1015,16 +1167,12 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1043,6 +1191,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1050,6 +1199,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1057,11 +1207,19 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton4;
+    private javax.swing.JToggleButton jToggleButton5;
+    private javax.swing.JToggleButton jToggleButton6;
     private javax.swing.JPanel maindashboard;
     private javax.swing.JPanel parent;
     // End of variables declaration//GEN-END:variables
