@@ -4,7 +4,6 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/repository/BankAccountRepository.java</file>
-            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/repository/ConnectionManager.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/model/Transaction.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/service/AccountServiceImpl.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/model/BankAccount.java</file>
@@ -12,8 +11,8 @@
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/service/AuthServiceImpl.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/controller/AccountController.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/model/CardInfo.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/view/SignUpWin.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/bankApplication/BankApplication.java</file>
-            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/view/SignUp.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/model/Customer.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/repository/CustomerRepository.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/view/LogInWindow.java</file>
@@ -22,6 +21,8 @@
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/controller/TransactionController.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/service/TransactionServiceImpl.java</file>
             <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/model/Person.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/view/MainWindow.java</file>
+            <file>file:/C:/Users/Jasper/Documents/NetBeansProjects/IMBANK_Project_java/JavaApplication10/src/bankApplication/BankConnectionManager.java</file>
         </group>
     </open-files>
 </project-private>
